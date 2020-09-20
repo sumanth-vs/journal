@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') -%>
+
+<h1>Compose</h1>
+
+<form action="/compose" method="post">
+  <h4>Title</h4>
+  <input
+    type="text"
+    name="newBlogTitle"
+    id="newBlogTitle"
+    placeholder="Name Your Blog"
+    autocomplete="off"
+  />
+  <h4>Post</h4>
+  <textarea name="newBlog" id="newBlog" cols="60" rows="10"></textarea>
+  <br />
+  <button type="submit" class="btn btn-primary">Publish</button>
+</form>
+
+<%- include('partials/footer.ejs') -%>

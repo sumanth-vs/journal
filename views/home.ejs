@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs'); -%>
+
+<h1>Hello</h1>
+
+<p><%=homeStartingContent%></p>
+
+<% blogPosts.forEach((e)=>{ %>
+<!-- Headings -->
+<h1><%= e.title%></h1>
+
+<p>
+  <%= (e.blog).slice(0, 200) + " ..." %>
+  <a href="/posts/<%=e.title%>">Read More</a>
+</p>
+<% }) %>
+
+<!-- Footer -->
+<%- include('partials/footer.ejs'); -%>
